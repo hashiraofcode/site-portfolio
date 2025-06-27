@@ -12,6 +12,16 @@
         img:"./assets/responsive-blogs.png"
     },
  ];
+ // função que troca o src do video bg de acordo com o tamanho da tela
+ const trocarBg = () => {
+    const source = document.getElementById("source");
+    const displayWidth = window.innerWidth;
+    if (displayWidth <= 768) {
+        source.src = "https://archive.org/download/video-bg-mobile/video-bg-mobile.ia.mp4";
+    } else {
+        source.src = "https://archive.org/download/video-bg-desktop/video-bg-desktop.ia.mp4";
+    }
+ }
  // função que constroi os cards;
 const createAProject = (arrayProjects) => {
     //itens 
@@ -43,6 +53,7 @@ const createAProject = (arrayProjects) => {
 
 
 window.onload = () => {
+    trocarBg();
     projectList.forEach((task)=> {
         createAProject(task);
     })

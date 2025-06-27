@@ -35,10 +35,13 @@
             <h1>Valmir Neto</h1>
             <h2>desenvolvedor front-end</h2>
             <!-- Vídeo desktop -->
-            <video autoplay muted loop playsinline id="bg-video-desktop">
-                <source src="video-desktop.mp4" type="video/mp4" id="source"/>
+             <div class="wrapper-video" aria-hidden="true">
+                 <video autoplay muted loop playsinline id="bg-video-desktop">
+                <source src="https://archive.org/download/video-bg-desktop/video-bg-desktop.ia.mp4" type="video/mp4" id="source"/>
             </video>
-            <div class="overlay"></div>
+             </div>
+           
+            <div class="overlay" aria-hidden="true"></div>
         </header>
         <main>
             <section class="about-section" id="sobre">
@@ -60,7 +63,7 @@
             <section id="contatos">
                 <h3>Fale comigo!!!</h3>
                 <p>entre em contato comigo para mais informações</p>
-                <form action="">
+                <form>
                     <input type="text" placeholder="Seu Nome" aria-label="digite o seu nome">
                     <textarea id="menssage-area" placeholder="Digite sua Menssagem..." aria-label="digite sua menssagem"></textarea>
                     <button type="submit">enviar para o whatsapp</button>
