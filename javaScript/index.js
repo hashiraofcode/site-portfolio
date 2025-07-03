@@ -11,7 +11,33 @@
         link:"https://thenewsdevblog.netlify.app/",
         img:"./assets/responsive-blogs.png"
     },
+    {
+        name: "Site da Microssoft",
+        description: "Clone responsivo da Microsoft feito com HTML, CSS e JavaScript.",
+        link:"https://layoutmicrossoft.netlify.app/",
+        img:"./assets/microssoftLayout.png"
+    },
+    {
+        name: "Jogo Jokenpô",
+        description:"Jogo de Jokenpô com lógica em JavaScript e interface simples e responsiva.",
+        link: "https://jokempogame.netlify.app/",
+        img: "./assets/jokenpoGame.png"
+    }
  ];
+ // função que envia menssagem do usuário;
+ const getMessage = (event) => {
+     event.preventDefault();
+     const nameArea = document.getElementById("name");
+     const messageArea = document.getElementById("menssage-area");
+     const nameValue = nameArea.value;
+     const messageValue = messageArea.value;
+     const text = `Olá me chamo ${nameValue}, \n ${messageValue}`;
+     const textFormated = encodeURIComponent(text);
+     // facilitar a manutebilidade do número de telefone caso necessário;
+     const contato = 5514988110406;
+     const url = `https://wa.me/${contato}?text=${textFormated}`
+     window.open(url,"_blank");
+ }
  // função que troca o src do video bg de acordo com o tamanho da tela
  const trocarBg = () => {
     const source = document.getElementById("source");
@@ -53,7 +79,13 @@ const createAProject = (arrayProjects) => {
 
 
 window.onload = () => {
+    // impedi o comportamento padrão do Form e pe;
+    document.getElementById("form").addEventListener("submit",getMessage)
+    const submitButton = document.getElementById("contact-button");
+    submitButton.addEventListener("click", getMessage);
+    // função que troca o video bg do inicio de acordo com o dispositivo;
     trocarBg();
+    // renderiza os projetos;
     projectList.forEach((task)=> {
         createAProject(task);
     })
