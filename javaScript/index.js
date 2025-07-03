@@ -26,7 +26,8 @@
         link: "https://jokempogame.netlify.app/",
         img: "./assets/jokenpoGame.png",
         class: "animation-scale"
-    }
+    },
+    
  ];
  // função que envia menssagem do usuário;
  const getMessage = (event) => {
