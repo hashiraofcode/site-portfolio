@@ -27,8 +27,50 @@
         img: "./assets/jokenpoGame.png",
         class: "animation-scale"
     },
-    
  ];
+ const languages = [
+    {
+        name: "HTML 5",
+        img: "./assets/html-1.svg"
+    },
+      {
+        name: "CSS 3",
+        img: "./assets/css-3.svg"
+    },
+      {
+        name: "JAVASCRIPT",
+        img: "./assets/javascript-1.svg"
+    },
+      {
+        name: "TAILWIND",
+        img: "./assets/tailwind-css-2.svg"
+    },
+      {
+        name: "BOOTSTRAP",
+        img: "./assets/bootstrap-5-1.svg"
+    },
+      {
+        name: "GIT AND GITHUB",
+        img: "./assets/github-icon-2.svg"
+    },
+ ]
+ // const que cria os cards das linguages que sei;
+ const cardsLanguages = (arrayLanguages) => {
+    const containerCards = document.querySelector(".container-languages-cards")
+    const card = document.createElement("div");
+    card.classList.add("card-languages");
+    const containerImg = document.createElement("div");
+    containerImg.classList.add("container-img-languages");
+    const img = document.createElement("img");
+    const title = document.createElement("h4");
+
+    img.src = arrayLanguages.img;
+    containerImg.appendChild(img);
+    title.textContent = arrayLanguages.name;
+    card.appendChild(containerImg);
+    card.appendChild(title);
+    containerCards.appendChild(card);
+};
  // função que envia menssagem do usuário;
  const getMessage = (event) => {
      event.preventDefault();
@@ -92,7 +134,10 @@ window.onload = () => {
     // função que troca o video bg do inicio de acordo com o dispositivo;
     trocarBg();
     // renderiza os projetos;
-    projectList.forEach((task)=> {
-        createAProject(task);
+    projectList.forEach((projects)=> {
+        createAProject(projects);
+    })
+    languages.forEach((cardInformation) => {
+        cardsLanguages(cardInformation);
     })
 };
