@@ -3,25 +3,29 @@
         name:"To Do List", 
         description:"Gerencie tarefas com praticidade. Design responsivo e funcional.",
         link:"https://dominatarefa.netlify.app/",
-        img:"./assets/to-do-list-project.png"
+        img:"./assets/to-do-list-project.png",
+        class: "animation-scale"
     },
     {
         name:"Blog Responsivo",
         description:"Layout adaptável para leitura fluida em qualquer dispositivo.",
         link:"https://thenewsdevblog.netlify.app/",
-        img:"./assets/responsive-blogs.png"
+        img:"./assets/responsive-blogs.png",
+        class: "animation-traslate"
     },
     {
         name: "Site da Microssoft",
         description: "Clone responsivo da Microsoft feito com HTML, CSS e JavaScript.",
         link:"https://layoutmicrossoft.netlify.app/",
-        img:"./assets/microssoftLayout.png"
+        img:"./assets/microssoftLayout.png",
+        class: "animation-traslate"
     },
     {
         name: "Jogo Jokenpô",
         description:"Jogo de Jokenpô com lógica em JavaScript e interface simples e responsiva.",
         link: "https://jokempogame.netlify.app/",
-        img: "./assets/jokenpoGame.png"
+        img: "./assets/jokenpoGame.png",
+        class: "animation-scale"
     }
  ];
  // função que envia menssagem do usuário;
@@ -59,6 +63,7 @@ const createAProject = (arrayProjects) => {
     const wrapperContent = document.createElement("div");
     
     img.src = arrayProjects.img;
+    img.classList.add(arrayProjects.class);
     wrapperImg.appendChild(img);
     wrapperImg.classList.add("img-cards-container");
     description.textContent = arrayProjects.description;
