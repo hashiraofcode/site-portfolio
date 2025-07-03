@@ -65,6 +65,7 @@
     const title = document.createElement("h4");
 
     img.src = arrayLanguages.img;
+    img.alt = arrayLanguages.name;
     containerImg.appendChild(img);
     title.textContent = arrayLanguages.name;
     card.appendChild(containerImg);
@@ -107,6 +108,7 @@ const createAProject = (arrayProjects) => {
     
     img.src = arrayProjects.img;
     img.classList.add(arrayProjects.class);
+    img.alt = arrayProjects.name;   
     wrapperImg.appendChild(img);
     wrapperImg.classList.add("img-cards-container");
     description.textContent = arrayProjects.description;
