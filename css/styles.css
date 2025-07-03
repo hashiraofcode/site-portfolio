@@ -512,7 +512,7 @@ section#contatos {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-90%);
+        transform: translateY(-50%);
     }
 }
 
