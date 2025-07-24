@@ -27,6 +27,13 @@
         img: "./assets/jokenpoGame.png",
         class: "animation-scale"
     },
+    {
+        name: "Arquiteture Project",
+        description:"Aplicação construida utilizando React. Com o objetivo de aprender como desenvolver uma aplicação em react com as melhores práticas do mercado",
+        link: "https://arquitetura-projects.netlify.app/",
+        img: "./assets/arquitetureProject.png",
+        class: "animation-traslate"
+    },
  ];
  const languages = [
     {
